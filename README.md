@@ -17,3 +17,15 @@ mvc指的是view，model和controller;v通知c，c再控制m;m再反映到v;他�
     }
   };
   ```
+
+#### 解构赋值
+```javascript
+  const obj ={a:1，b:2};
+  const {a,b} = obj;
+  const {a:c,b:d}=obj://将a的值赋值给变量c，b的值赋值给变量d；
+  //在函数里面也一样；
+  function fun ({a,b}){
+    conosole.log(a,b)// 1,2
+  }
+  fun(obj)
+```
