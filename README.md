@@ -1,4 +1,5 @@
 2020-06-22
+
 #### MVC和MVVM
 mvc指的是view，model和controller;v通知c，c再控制m;m再反映到v;他们的通信都是单向的；mvvm是指model view 和viewmodel view的变化会反映在viewmodel上viewmodel和model间是双向通信；
 #### ajax contentType
@@ -16,7 +17,7 @@ mvc指的是view，model和controller;v通知c，c再控制m;m再反映到v;他�
       console.log(`Hi,${this.nkyName}`);//这里输出undefined 箭头函数的this继承的是父执行上下文里面的this；父执行是person1；父执行上下文是window;let不会挂载在window上
     }
   };
-  ```
+```
 
 #### 解构赋值
 ```javascript
@@ -29,3 +30,24 @@ mvc指的是view，model和controller;v通知c，c再控制m;m再反映到v;他�
   }
   fun(obj)
 ```
+
+#### Object的一些应用
+
+```javascript
+const obj = {
+    start:'开始',
+    end:'结束',
+    stop:'停止',
+}
+if(value ==='start'){
+    console.log(`发送的是；开始`)
+}else if(value ==='end'){
+    console.log(`发送的是；结束`)
+}else{
+    console.log(`发送的是；停止`)
+}
+//上面的判断可以直接用优化为
+//可以看出某些情况下适用数组来代替也是同理的优化代码
+console.log(`发送的是${obj[value]}`)
+```
+
